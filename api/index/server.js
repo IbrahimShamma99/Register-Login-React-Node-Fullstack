@@ -4,13 +4,15 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('../constants/DB');
-const registrationRoutes = require('../routes/route');
+const registrationRoutes = require('../routes/api/register');
+const loginRoutes = require('../routes/api/login');
 const session = require('express-session');
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use("./schema/User", registrationRoutes);
+app.use("../schema/User", registrationRoutes);
+app.use(loginRoutes);
 
 app.use(session({
     secret: 'LoginPlugin',

@@ -2,7 +2,8 @@ const RouteNames = {
     register: '/register',
     login: '/login',
     data: '/allData',
-    validate: '/validateUsername'
+    validate: '/validateUsername',
+    base: ''
 
 };
 
