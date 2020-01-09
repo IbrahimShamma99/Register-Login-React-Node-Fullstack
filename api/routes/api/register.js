@@ -6,8 +6,17 @@ let RouteNames = require("../../constants/constants");
 
 //SECTION Registration route
 router.route(RouteNames.register).post(function(req, res) {
-    let register = new User(req.body);
-    register.save()
+    let user = new User();
+    const registrationInfo = req.body;
+    try {
+        user.first_name = registrationInfo.first_name;
+        user.last_name = registrationInfo.last_name;
+        user.user_name = registrationInfo.user_name;
+        user.password = registrationInfo.password;
+    } catch (e) {
+        res.status(400).send("Failed to store to database");
+    }
+    user.save()
         .then(reg => {
             res.sendStatus(200);
         })

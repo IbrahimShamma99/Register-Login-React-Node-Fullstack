@@ -8,10 +8,11 @@ const registrationRoutes = require('../routes/api/register');
 const loginRoutes = require('../routes/api/login');
 const session = require('express-session');
 
-app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use("../schema/User", registrationRoutes);
+app.use(cors());
+app.use(require("../schema/User"));
+app.use(registrationRoutes);
 app.use(loginRoutes);
 
 app.use(session({
@@ -28,7 +29,5 @@ mongoose
     });
 
 mongoose.set('debug', true);
-
-
 
 module.exports = app;

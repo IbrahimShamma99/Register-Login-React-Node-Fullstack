@@ -14,6 +14,14 @@ let UserSchema = new Schema({
         match: [/^[a-zA-Z0-9]+$/, 'is invalid'],
         required: [true, "can't be blank"]
     },
+    email: {
+        type: String,
+        lowercase: true,
+        unique: true,
+        //required: [true, "can't be blank"],
+        match: [/\S+@\S+\.\S+/, 'is invalid'],
+        index: true,
+    },
     user_name: {
         type: String,
         lowercase: true,
