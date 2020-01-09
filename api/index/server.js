@@ -3,9 +3,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const config = require('../DB.js');
-const registrationRoutes = require('../route');
-var session = require('express-session');
+const config = require('../constants/DB');
+const registrationRoutes = require('../routes/route');
+const session = require('express-session');
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
