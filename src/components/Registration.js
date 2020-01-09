@@ -13,6 +13,7 @@ import {
   COMMON_FIELDS,
   ERROR_IN_REGISTRATION,
 } from '../MessageBundle';
+import '../javel.css';
 
 export default class Registration extends Component {
   constructor (props) {
@@ -95,13 +96,15 @@ export default class Registration extends Component {
     const {register, error, user_name_taken} = this.state;
 
     return (
-      <div className="Registration">
+      <div className="register">
         <h1> {REGISTRATION_FIELDS.REGISTRATION_HEADING} </h1> <form
           onSubmit={this.onSubmit}
         >
           <div>
             <div className="fields">
               <p> {REGISTRATION_FIELDS.FIRST_NAME} </p>
+              {' '}
+              {' '}
               {' '}
               <input
                 type="text"
@@ -110,8 +113,15 @@ export default class Registration extends Component {
                 onChange={this.handleOnChangeFirstName}
               />
               {' '}
-            </div> <div className="fields">
+              {' '}
+              {' '}
+            </div>
+            {' '}
+            <div className="fields">
+              {' '}
               <p> {REGISTRATION_FIELDS.LAST_NAME} </p>
+              {' '}
+              {' '}
               {' '}
               <input
                 type="text"
@@ -120,8 +130,15 @@ export default class Registration extends Component {
                 onChange={this.handleOnChangeLastName}
               />
               {' '}
-            </div> <div className="fields">
+              {' '}
+              {' '}
+            </div>
+            {' '}
+            <div className="fields">
+              {' '}
               <p> {COMMON_FIELDS.USER_NAME} </p>
+              {' '}
+              {' '}
               {' '}
               <input
                 type="text"
@@ -134,7 +151,10 @@ export default class Registration extends Component {
                 required
               />
             </div> <div className="fields">
+              {' '}
               <p> {COMMON_FIELDS.PASSWORD} </p>
+              {' '}
+              {' '}
               {' '}
               <input
                 type="password"
@@ -144,24 +164,40 @@ export default class Registration extends Component {
                 autoComplete="password"
                 required
               />
-            </div> <div className="buttons">
+            </div>
+            {' '}
+            <div className="buttons">
+              {' '}
               <button
                 type="submit"
                 className="btn btn-primary"
                 disabled={user_name_taken}
               >
-                {' '}{REGISTRATION_FIELDS.REGISTER}{' '}
+                {' '}{' '} {REGISTRATION_FIELDS.REGISTER} {' '}{' '}
               </button>
+              {' '}
+              {' '}
               {' '}
               <Link to="/login"> {REGISTRATION_FIELDS.CANCEL} </Link>
               {' '}
-            </div>{' '}
-          </div>{' '}
+              {' '}
+              {' '}
+            </div>
+            {' '}
+            {' '}
+            {' '}
+          </div>{' '}{' '}
         </form>
+        {' '}
+        {' '}
         {' '}
         {error && <Error message={ERROR_IN_REGISTRATION} />}
         {' '}
+        {' '}
+        {' '}
         {register && <Message message={REGISTRATION_MESSAGE} />}
+        {' '}
+        {' '}
         {' '}
       </div>
     );

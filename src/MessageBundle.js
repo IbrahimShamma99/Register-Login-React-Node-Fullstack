@@ -1,9 +1,9 @@
 export const REGISTRATION_FIELDS = {
-	FIRST_NAME : 'First Name',
-	LAST_NAME : 'Last Name',
-	REGISTER: 'Register',
-	CANCEL: 'Cancel',
-	REGISTRATION_HEADING: 'Sign Up'
+    FIRST_NAME: 'First Name',
+    LAST_NAME: 'Last Name',
+    REGISTER: 'Register',
+    CANCEL: 'Cancel',
+    REGISTRATION_HEADING: 'Sign Up'
 }
 
 export const REGISTRATION_MESSAGE = 'Registered Successfully';
@@ -12,11 +12,11 @@ export const LOGIN_MESSAGE = 'Login Successful';
 export const ERROR_IN_LOGIN = 'Error in Login'
 
 export const COMMON_FIELDS = {
-	USER_NAME : 'Username',
-	PASSWORD : 'Password'
+    USER_NAME: 'Username',
+    PASSWORD: 'Password'
 }
 
 export const LOGIN_FIELDS = {
-	LOGIN: 'Login',
-	LOGIN_HEADING: 'Login'
+    LOGIN: 'Let me in',
+    LOGIN_HEADING: 'Login'
 }
