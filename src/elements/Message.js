@@ -6,7 +6,7 @@ const Message = ({ message }) => (
 		<span className="glyphicon glyphicon-thumbs-up"></span>
 		<span className="message">{message}</span>
 		</div>
-</div>
+	</div>
 );
 
 export default Message;
